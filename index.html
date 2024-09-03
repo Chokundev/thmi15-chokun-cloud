@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบดัชนีชี้วัดสุขภาพจิตคนไทย : THMI15</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded shadow">
+        <h1 class="text-2xl font-bold mb-4 text-center">แบบทดสอบดัชนีชี้วัดสุขภาพจิตคนไทย : THMI15</h1>
+
+        <!-- User Information Form -->
+        <form id="user-info" class="space-y-4">
+            <div>
+                <label for="gender" class="block text-gray-700">เพศ :</label>
+                <select id="gender" class="w-full p-2 border rounded" required>
+                    <option value="">เลือกเพศ</option>
+                    <option value="1">ชาย</option>
+                    <option value="2">หญิง</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="age" class="block text-gray-700">อายุ :</label>
+                <select id="age" class="w-full p-2 border rounded" required>
+                    <option value="">กรุณาเลือก</option>
+                    <option value="1">0 - 12 ปี</option>
+                    <option value="2">13 - 19 ปี</option>
+                    <option value="3">20 - 25 ปี</option>
+                    <option value="4">26 - 39 ปี</option>
+                    <option value="5">40 - 59 ปี</option>
+                    <option value="6">60 ปีขึ้นไป</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="education" class="block text-gray-700">ระดับการศึกษา :</label>
+                <select id="education" class="w-full p-2 border rounded" required>
+                    <option value="">กรุณาเลือก</option>
+                    <option value="1">ต่ำกว่ามัธยมศึกษาตอนปลาย</option>
+                    <option value="2">มัธยมศึกษาตอนปลาย หรือ เทียบเท่า</option>
+                    <option value="3">อนุปริญญา หรือ เทียบเท่า</option>
+                    <option value="4">ปริญญาตรี</option>
+                    <option value="5">ปริญญาโท / เอก</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="occupation" class="block text-gray-700">อาชีพ :</label>
+                <select id="occupation" class="w-full p-2 border rounded" required>
+                    <option value="">กรุณาเลือก</option>
+                    <option value="6">อื่นๆ</option>
+                    <option value="1">ข้าราชการ / รัฐวิสาหกิจ / พนักงานของรัฐ</option>
+                    <option value="2">พนักงานบริษัท / ห้างร้าน</option>
+                    <option value="3">ธุรกิจส่วนตัว / ค้าขาย</option>
+                    <option value="4">รับจ้าง</option>
+                    <option value="5">นักเรียน / นิสิต / นักศึกษา</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="marital" class="block text-gray-700">สถานภาพการสมรส:</label>
+                <select id="marital" class="w-full p-2 border rounded" required>
+                    <option value="">กรุณาเลือก</option>
+                    <option value="1">โสด</option>
+                    <option value="2">สมรส</option>
+                    <option value="3">หย่า</option>
+                    <option value="5">แยกกันอยู่</option>
+                    <option value="6">หม้าย</option>
+                </select>
+            </div>
+
+            <button type="button" class="w-full bg-blue-500 text-white p-2 rounded" onclick="startQuiz()">เริ่มทำแบบทดสอบ</button>
+        </form>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="hidden">
+            <h2 class="text-2xl font-bold mb-4 text-center">คำถาม</h2>
+            <div id="question-container" class="space-y-4"></div>
+            <button id="next-btn" class="w-full bg-green-500 text-white p-2 rounded mt-4" onclick="nextQuestion()">คำถามถัดไป</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
